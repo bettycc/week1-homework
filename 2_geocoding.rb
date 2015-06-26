@@ -21,9 +21,7 @@ data = JSON.parse(json_data)
 #puts data.keys.join(',')
 #puts data.values
 #puts data[0]["results"]["geometry"]["location"]["lat"]
-#puts data
-#array = data.to_a
-#array.index[1]
+
 
 puts JSON.pretty_generate(data)
 #puts data['results']['geometry']['location']['lat']

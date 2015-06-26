@@ -19,11 +19,40 @@ json_data = open(url).read
 data = JSON.parse(json_data)
 
 puts data.keys
-puts data.values
+puts JSON.pretty_generate(data)
+#puts data['routes'].class -->its an array
+#puts data['routes'][0]--> its a hash
+#puts data['routes'][0]['legs']-->its an array
+#puts data['routes'][0]['legs'][0] -->hash
+#puts data['routes'][0]['legs'][0]['distance'] -->hash
+puts data['routes'][0]['legs'][0]['distance'].keys#hash
+puts data['routes'][0]['legs'][0]['duration']     #hash
+#puts data['routes'][0]['legs'][0]['steps']        #array
+
+a = data['routes'][0]['legs'][0]['steps']
+a.each do |a|
+	puts a
+	puts
+end
+
+#puts a[0]['distance']['text'] #String
+#puts a[1]['distance']['text']
+
+a.each do |a|
+	puts a['distance']['text']
+	puts
+end
 
 # 1. TO DO:
 # Replace the following 0 with an expression that will retrieve the total travel time
 total_time = 0
+
+a.each do |a|
+	puts a['duration']['text'].delete" j-m"
+	puts 
+end
+
+puts a[0]['duration']['text'].split.to_i
 
 # Output the total drive time to the screen
 #puts "Total travel time driving: #{total_time}"
