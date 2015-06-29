@@ -23,7 +23,13 @@ data = JSON.parse(json_data)
 #puts data[0]["results"]["geometry"]["location"]["lat"]
 
 
-puts JSON.pretty_generate(data)
+#puts JSON.pretty_generate(data)
+
+#From line33 to 45, try to find the type of sublists
+#
+#
+
+
 #puts data['results']['geometry']['location']['lat']
 #puts data['results']['formatted_address'] ->shows no implicit conversion of String into Integer (TypeError)
 #puts data.class --> its hash
@@ -31,12 +37,12 @@ puts JSON.pretty_generate(data)
 #puts data['results'][0] -> its hash
 
 result0 = data['results'][0]
-puts result0.keys
-puts result0['geometry']
+#puts result0.keys
+#puts result0['geometry']
 #puts result0['geometry'].class -->its a hash
-puts result0['geometry'].keys
+#puts result0['geometry'].keys
 #puts result0['geometry']['location'] -->it's a hash
-puts result0['geometry']['location']
+#puts result0['geometry']['location']
 
 latitude = result0['geometry']['location']['lat']
 longitude = result0['geometry']['location']['lng']

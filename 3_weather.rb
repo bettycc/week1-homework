@@ -19,7 +19,7 @@ data = JSON.parse(json_data)
 # 1. TO DO:
 # Replace the following 0 with an expression
 # that will extract the temperature
-puts data.keys
+#puts data.keys
 #puts data.values
 #puts data['main']['temp']
 
